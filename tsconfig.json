@@ -1,16 +1,25 @@
 {
-  "compileOnSave": false,
+  /* Poetic base style configuration */
+  "extends": "./node_modules/poetic/config/typescript/tsconfig.json",
+  /* Add your custom configuration after this */
+  "include": ["src/**/*"],
   "compilerOptions": {
-    "baseUrl": "./src",
-    "sourceMap": true,
-    "declaration": false,
-    "module": "es2015",
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "importHelpers": true,
     "target": "es5",
-    "typeRoots": ["node_modules/@types"],
-    "lib": ["es2018", "dom"]
+    "outDir": "dist",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "jsx": "react",
+    "noEmit": true
   }
 }
