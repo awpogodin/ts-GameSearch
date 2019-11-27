@@ -1,11 +1,17 @@
 /* eslint-disable no-console */
 import './styles/index.css';
 
-const searchInput: HTMLInputElement = document.querySelector('.js-search-input');
-const clearBtn: HTMLElement = document.querySelector('.js-clear-btn');
+import games from './db';
 
-clearBtn.addEventListener('click', (e: Event): void => {
-  e.preventDefault();
-  console.log(searchInput);
-  searchInput.value = '';
-});
+const searchInput: HTMLInputElement | null = document.querySelector('.js-search-input');
+const clearBtn: HTMLElement | null = document.querySelector('.js-clear-btn');
+
+if (clearBtn) {
+  clearBtn.addEventListener('click', (e: Event): void => {
+    e.preventDefault();
+    console.log(games);
+    if (searchInput) {
+      searchInput.value = '';
+    }
+  });
+}
