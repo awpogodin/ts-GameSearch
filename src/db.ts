@@ -1,4 +1,10 @@
-const games: object[] = [
+interface Game {
+  name: string;
+  developer: string;
+  platforms: string;
+}
+
+const games: Array<Game> = [
   {
     name: 'GTA 5',
     developer: 'Rockstar Games',
