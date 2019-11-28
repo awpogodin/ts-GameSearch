@@ -2,31 +2,8 @@
 import './styles/index.css';
 
 import games from './db';
-
-interface Game {
-  name: string;
-  developer: string;
-  platforms: string;
-}
-
-class GameCard {
-  constructor(wrapper: HTMLElement, public game: Game) {
-    const template: HTMLTemplateElement | null = document.querySelector('#gameCard');
-    if (template) {
-      const content: DocumentFragment = document.importNode(template.content, true);
-
-      const gameTitle: HTMLElement | null = content.querySelector('.js-game-title');
-      const gameDeveloper: HTMLElement | null = content.querySelector('.js-game-developer');
-      const gamePlatforms: HTMLElement | null = content.querySelector('.js-game-platforms');
-
-      if (gameTitle) gameTitle.innerHTML = this.game.name;
-      if (gameDeveloper) gameDeveloper.innerHTML = this.game.developer;
-      if (gamePlatforms) gamePlatforms.innerHTML = this.game.platforms;
-
-      wrapper.appendChild(content);
-    }
-  }
-}
+import Game from './interfaces/Game.interface';
+import GameCard from './classes/GameCard.class';
 
 const searchInput: HTMLInputElement | null = document.querySelector('.js-search-input');
 const clearBtn: HTMLElement | null = document.querySelector('.js-clear-btn');
