@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import './styles/index.css';
+import './styles/styles.scss';
 
 import games from './db';
 import Game from './interfaces/Game.interface';

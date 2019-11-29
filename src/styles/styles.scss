@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&display=swap');
-
 * {
   box-sizing: border-box;
-  outline: none;
   padding: 0;
   margin: 0;
 }
@@ -10,19 +8,16 @@
 body {
   font-family: 'Open Sans', sans-serif;
 }
-
 .title {
   display: block;
   text-align: center;
   margin: 30px auto;
   font-weight: 100;
 }
-
 .search-form {
   width: 300px;
   margin: 15px auto;
 }
-
 input.search-form__input {
   width: 100%;
   border: 1px solid #212121;
@@ -30,27 +25,22 @@ input.search-form__input {
   color: #000;
   background: #fff;
   transition-duration: 0.5s;
+  &::placeholder {
+    color: #9e9e9e;
+  }
+  &:hover {
+    box-shadow: 0 0 10px rgba(33, 33, 33, 0.5);
+  }
+  &:focus {
+    box-shadow: 0 0 20px rgba(33, 33, 33, 0.5);
+  }
 }
-
-input.search-form__input::placeholder {
-  color: #9e9e9e;
-}
-
-input.search-form__input:hover {
-  box-shadow: 0 0 10px rgba(33, 33, 33, 0.5);
-}
-
-input.search-form__input:focus {
-  box-shadow: 0 0 20px rgba(33, 33, 33, 0.5);
-}
-
 .search-form__btns {
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
   margin-top: 10px;
 }
-
 .btns__btn-clear {
   flex: 1 0;
   width: 50%;
@@ -61,14 +51,12 @@ input.search-form__input:focus {
   padding: 10px 20px;
   cursor: pointer;
   transition: all linear 0.3s;
+  &:hover {
+    color: #fff;
+    background-color: #f44336;
+    box-shadow: 0 0 20px rgba(244, 67, 54, 0.5);
+  }
 }
-
-.btns__btn-clear:hover {
-  color: #fff;
-  background-color: #f44336;
-  box-shadow: 0 0 20px rgba(244, 67, 54, 0.5);
-}
-
 .btns__btn-search {
   flex: 1 0;
   width: 50%;
@@ -79,34 +67,28 @@ input.search-form__input:focus {
   padding: 10px 20px;
   cursor: pointer;
   transition: all linear 0.3s;
+  &:hover {
+    color: #fff;
+    background-color: #4caf50;
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.5);
+  }
 }
-
-.btns__btn-search:hover {
-  color: #fff;
-  background-color: #4caf50;
-  box-shadow: 0 0 20px rgba(76, 175, 80, 0.5);
-}
-
 .app {
   width: 300px;
   margin: 30px auto;
 }
-
 .game-card {
   margin-top: 20px;
   padding: 15px;
   text-align: center;
   box-shadow: 0 0 10px rgba(33, 33, 33, 0.3);
 }
-
 .game-card__title {
   font-weight: 100;
 }
-
 .game-card__developer {
   font-weight: 300;
 }
-
 .game-card__platforms {
   font-weight: 300;
 }
